@@ -54,17 +54,9 @@ The dataset (`data/AIML Dataset.csv`) contains **6.3 million** financial transac
 
 ---
 
-Fraud-Detection-App/
-├── data/
-│   └── AIML Dataset.csv               # Transaction dataset (download manually from Kaggle)
-├── notebooks/
-│   └── Analysis_Model.ipynb          # EDA and model training notebook
-├── src/
-│   └── app.py                        # Streamlit app for fraud prediction
-├── requirements.txt                  # Python dependencies
-├── README.md                         # Project documentation
-├── LICENSE                           # License (e.g., MIT)
-└── .gitignore                        # Ignore unnecessary files
+## 📁 Repository Structure
+
+
 
 ## 🧠 Model Details
 
