@@ -53,6 +53,19 @@ The dataset (`data/AIML Dataset.csv`) contains **6.3 million** financial transac
 📎 **Note**: If the dataset exceeds GitHub's 100MB limit, download it manually from Kaggle or [insert external link] and place it inside the `data/` folder.
 
 ---
+## 📁 Repository Structure
+Fraud-Detection-App/
+Fraud-Detection-App/
+├── data/
+│ └── AIML Dataset.csv # Transaction dataset (download from Kaggle)
+├── notebooks/
+│ └── Analysis_Model.ipynb # Jupyter notebook for EDA and model training
+├── src/
+│ └── app.py # Streamlit app for interactive fraud prediction
+├── requirements.txt # List of required Python libraries
+├── README.md # Project documentation
+├── LICENSE # License file (e.g., MIT)
+└── .gitignore # Files and folders to be ignored by Git
 
 
 
