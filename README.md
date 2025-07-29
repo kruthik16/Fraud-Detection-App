@@ -55,7 +55,6 @@ The dataset (`data/AIML Dataset.csv`) contains **6.3 million** financial transac
 ---
 
 ## 📁 Repository Structure
-
 Fraud-Detection-App/
 ├── data/
 │ └── AIML Dataset.csv # Transaction dataset (download from Kaggle)
