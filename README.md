@@ -54,47 +54,45 @@ The dataset (`data/AIML Dataset.csv`) contains **6.3 million** financial transac
 
 ---
 
-## 🗂 Repository Structure
+## 🧠 Model Details
 
-fraud-detection-project/
-├── data/
-│ └── AIML Dataset.csv # Transaction dataset
-├── notebooks/
-│ └── Analysis_Model.ipynb # EDA & ML model
-├── src/
-│ └── app.py # Streamlit web app
-├── requirements.txt # Project dependencies
-├── README.md # This file
-├── LICENSE # License file (MIT)
-└── .gitignore # Ignore unnecessary files
+**Algorithm:**  
+Logistic Regression with `class_weight='balanced'` to address class imbalance.
 
-🧠 Model Details
-Algorithm: Logistic Regression with class_weight='balanced'
+**🔄 Preprocessing Steps:**  
+- `StandardScaler` applied to numerical features  
+- `OneHotEncoder` used for categorical feature (`type`)
 
-Preprocessing:
+**📥 Input Features:**  
+- `step`  
+- `type`  
+- `amount`  
+- `oldbalanceOrg`  
+- `newbalanceOrig`  
+- `oldbalanceDest`  
+- `newbalanceDest`
 
-StandardScaler for numerical features
+---
 
-OneHotEncoder for categorical features (type)
+## 📈 Performance (Test Set)
 
-Input Features:
+| Metric              | Value    |
+|---------------------|----------|
+| **Accuracy**         | 94.67%   |
+| **Precision (Fraud)**| 0.02     |
+| **Recall (Fraud)**   | 0.94     |
+| **F1-Score (Fraud)** | 0.04     |
 
-step, type, amount, oldbalanceOrg, newbalanceOrig, oldbalanceDest, newbalanceDest
+✅ **Strength:**  
+High recall — effectively identifies most fraudulent transactions.
 
-📈 Performance (Test Set)
-Metric	Value
-Accuracy	94.67%
-Precision (Fraud)	0.02
-Recall (Fraud)	0.94
-F1-Score (Fraud)	0.04
+⚠️ **Limitation:**  
+Low precision — high number of false positives due to class imbalance.
 
-📌 Strength: High recall means it catches most frauds
-⚠️ Limitation: Low precision due to imbalance — many false positives
+---
 
-🔧 Future Improvements
-Use SMOTE or ADASYN for better class balancing
+## 🔧 Future Improvements
 
-Experiment with ensemble models like Random Forest or XGBoost
-
-Perform hyperparameter tuning and cross-validation
-
+- Apply **SMOTE** or **ADASYN** for synthetic minority oversampling  
+- Explore **ensemble models** like **Random Forest** or **XGBoost**  
+- Perform **hyperparameter tuning** and **cross-validation** for model optimization
