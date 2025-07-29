@@ -1,71 +1,35 @@
-# Fraud-Detection-App
+# 🕵️‍♂️ Fraud Detection App
 
-This project implements a machine learning-based fraud detection system for financial transactions. It includes a Jupyter notebook for exploratory data analysis (EDA) and model training, a Streamlit web application for interactive fraud predictions, and a dataset (https://www.kaggle.com/datasets/amanalisiddiqui/fraud-detection-dataset/data). The model leverages logistic regression with balanced class weights to address the imbalanced nature of fraud data, achieving high recall for detecting fraudulent transactions.
+This project is a **Streamlit-based web application** that allows users to detect fraudulent transactions using a trained Machine Learning model. Built with Python, Pandas, and Scikit-learn, the app enables quick and user-friendly fraud risk analysis.
 
-Table of Contents
-Project Overview
-Dataset
-Repository Structure
-Installation
-Usage
-Model Details
-Contributing
-License
-Project Overview
-The Fraud Detection Project aims to identify fraudulent financial transactions using machine learning. The Jupyter notebook (notebooks/Analysis_Model.ipynb) performs EDA, data preprocessing, and trains a logistic regression model to classify transactions as fraudulent or non-fraudulent. The Streamlit app (src/app.py) provides a user-friendly interface to input transaction details and receive real-time fraud predictions.
+---
 
-Key features:
+## 🚀 Features
 
-Analysis of transaction data with features like step, type, amount, and isFraud.
-Logistic regression model with balanced class weights to handle imbalanced data (0.13% fraud rate).
-Interactive web app for fraud prediction.
-Dataset
-The dataset (data/AIML Dataset.csv) contains 6,362,620 financial transaction records with the following key columns:
+- Upload transaction data as a CSV file
+- Perform real-time fraud classification
+- Display fraud probability per transaction
+- Interactive visualizations of data distribution
+- Simple, clean UI using Streamlit
 
-step: Time step of the transaction.
-type: Transaction type (e.g., PAYMENT, TRANSFER, CASH_OUT).
-amount: Transaction amount.
-oldbalanceOrg, newbalanceOrig: Origin account balances before and after the transaction.
-oldbalanceDest, newbalanceDest: Destination account balances before and after the transaction.
-isFraud: Binary label (1 for fraudulent, 0 for non-fraudulent).
-Note: If the dataset exceeds GitHub's 100 MB limit, it is hosted externally. Download it from [Insert External Link, e.g., Google Drive or Kaggle] and place it in the data/ folder.
+---
 
-Repository Structure
-fraud-detection-project/
-├── data/
-│   └── AIML Dataset.csv
-├── notebooks/
-│   └── Analysis_Model.ipynb
-├── src/
-│   └── app.py
-├── requirements.txt
-├── README.md
-├── LICENSE
-└── .gitignore
-data/: Contains the dataset (AIML Dataset.csv).
-notebooks/: Includes the Jupyter notebook for EDA and model training.
-src/: Holds the Streamlit app code (app.py).
-requirements.txt: Lists Python dependencies.
-README.md: Project documentation.
-LICENSE: MIT License file.
-.gitignore: Excludes unnecessary files (e.g., virtual environments).
-Deployed Streamlit App
-The app is deployed on Streamlit Community Cloud. Access it at https://fraud-detection-app-taqhypmjn8savxewsib3yw.streamlit.app/.
+## 🧠 Machine Learning Model
 
-Model Details
-Algorithm: Logistic Regression with class_weight='balanced' to handle the imbalanced dataset (0.13% fraud cases).
-Features: step, type (one-hot encoded), amount, oldbalanceOrg, newbalanceOrig, oldbalanceDest, newbalanceDest.
-Preprocessing:
-Numerical features scaled using StandardScaler.
-Categorical feature type encoded using OneHotEncoder.
-Performance (on test set):
-Accuracy: 94.67%
-Fraud class (isFraud=1):
-Precision: 0.02 (low due to imbalance)
-Recall: 0.94 (high, good at detecting fraud)
-F1-Score: 0.04
-See notebooks/Analysis_Model.ipynb for detailed metrics and confusion matrix.
-Limitations:
+- **Algorithm Used**: (e.g., Random Forest / Logistic Regression / XGBoost)
+- **Data Preprocessing**: Missing value handling, feature scaling
+- **Evaluation Metrics**: Accuracy, Precision, Recall, F1 Score
+- **Training Dataset**: A labeled dataset of transactions with fraud indicators
 
-Low precision for fraud due to class imbalance.
-Future improvements: Use SMOTE for oversampling, test ensemble models (e.g., Random Forest, XGBoost), or tune hyperparameters.
+---
+
+## 📦 Project Structure
+
+```bash
+fraud_detection/
+│
+├── app.py                # Streamlit app
+├── fraud_model.pkl       # Trained ML model
+├── requirements.txt      # Python dependencies
+├── README.md             # Project documentation
+└── sample_data.csv       # Sample transaction data
