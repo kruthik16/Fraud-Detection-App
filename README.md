@@ -56,3 +56,45 @@ The dataset (`data/AIML Dataset.csv`) contains **6.3 million** financial transac
 
 ## 🗂 Repository Structure
 
+fraud-detection-project/
+├── data/
+│ └── AIML Dataset.csv # Transaction dataset
+├── notebooks/
+│ └── Analysis_Model.ipynb # EDA & ML model
+├── src/
+│ └── app.py # Streamlit web app
+├── requirements.txt # Project dependencies
+├── README.md # This file
+├── LICENSE # License file (MIT)
+└── .gitignore # Ignore unnecessary files
+
+🧠 Model Details
+Algorithm: Logistic Regression with class_weight='balanced'
+
+Preprocessing:
+
+StandardScaler for numerical features
+
+OneHotEncoder for categorical features (type)
+
+Input Features:
+
+step, type, amount, oldbalanceOrg, newbalanceOrig, oldbalanceDest, newbalanceDest
+
+📈 Performance (Test Set)
+Metric	Value
+Accuracy	94.67%
+Precision (Fraud)	0.02
+Recall (Fraud)	0.94
+F1-Score (Fraud)	0.04
+
+📌 Strength: High recall means it catches most frauds
+⚠️ Limitation: Low precision due to imbalance — many false positives
+
+🔧 Future Improvements
+Use SMOTE or ADASYN for better class balancing
+
+Experiment with ensemble models like Random Forest or XGBoost
+
+Perform hyperparameter tuning and cross-validation
+
