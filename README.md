@@ -3,6 +3,7 @@
 This project implements a machine learning-based fraud detection system for financial transactions. It includes a Jupyter Notebook for exploratory data analysis (EDA) and model training, a Streamlit web application for interactive fraud predictions, and a dataset sourced from Kaggle.
 
 📌 **Dataset**: [Kaggle - Fraud Detection Dataset](https://www.kaggle.com/datasets/amanalisiddiqui/fraud-detection-dataset/data)  
+    **Streamlit** : https://frauddetectionpy-6qkdwckf9mzxemncennjvn.streamlit.app/ 
 
 ---
 
