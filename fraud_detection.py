@@ -2,9 +2,11 @@ import streamlit as st
 import pandas as pd
 import sklearn
 import joblib
+import os 
 st.write("Scikit-learn version:", sklearn.__version__)
-
-model= joblib.load("fraud_detection_pipeline.pkl")
+model_path = os.path.join(os.path.dirname(__file__), 'fraud_detection_pipeline.pkl')
+model = joblib.load(model_path)
+# model= joblib.load("fraud_detection_pipeline.pkl")
 st.title("Fraud Detection Prediction App")
 st.markdown("please neter the transaction details and use the predict button")
 st.divider()
